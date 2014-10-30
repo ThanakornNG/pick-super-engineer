@@ -25,10 +25,6 @@ class Engineer
       puts nameList[rand(nameList.length)] ## fetch random name from searched list and print it.
       
    end
-     
-      
-   
-   
 end
 test = Engineer.new()
 name = test.pick_engineer
@@ -38,7 +34,9 @@ puts test.pick_featureA(name)
 puts "testing Feature B"#debug
 puts test.featureB
 puts "testing Feature C"#debug
-puts test.featureC('arn')#debug
+print "search : "
+text = gets.chomp
+puts test.featureC(text)#debug
 
 
 
