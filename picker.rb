@@ -26,6 +26,8 @@ class Engineer
       
    end
 end
+
+
 test = Engineer.new()
 name = test.pick_engineer
 puts name
@@ -35,8 +37,8 @@ puts "testing Feature B"#debug
 puts test.featureB
 puts "testing Feature C"#debug
 print "search : "
-text = gets.chomp
-puts test.featureC(text)#debug
+t = ARGV[0]
+puts test.featureC(t)#debug
 
 
 
