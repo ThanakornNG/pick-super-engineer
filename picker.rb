@@ -6,6 +6,12 @@ class Engineer
    def pick_engineer
       @engineers.sample #random and return string
    end
+
+   def featureB
+      eng = pick_engineer
+      eng[0,eng.index(" ") + 2] + "..."
+   end
 end
 test = Engineer.new()
 puts test.pick_engineer
+puts test.featureB
