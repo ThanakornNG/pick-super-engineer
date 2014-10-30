@@ -12,16 +12,22 @@ class Engineer
       x = @engineers.find_all { |line| line =~ /#{Regexp.quote(txt)}/ } # the magic by looking up names containing string
       x.each{|a|
         nameList.push(a)#
-        }
-        puts nameList[rand(nameList.length)] ## fetch random name from searched list and print it.
+      }
+      puts nameList[rand(nameList.length)] ## fetch random name from searched list and print it.
       
-      end
-
+   end
+   def pick_featureA(name)
+      name.gsub " ","." #replace space with dot
+   end
+     
       
    
    
 end
 test = Engineer.new()
-puts test.pick_engineer
+name=test.pick_engineer
+puts name
+puts test.pick_featureA(name)
 puts "testing Feature C"#debug
 puts test.featureC('arn')#debug
+
