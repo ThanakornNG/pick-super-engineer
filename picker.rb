@@ -6,6 +6,14 @@ class Engineer
    def pick_engineer
       @engineers.sample #random and return string
    end
+
+   def pick_featureA(name)
+      name.gsub " ","." #replace space with dot
+   end
+     
+	
 end
 test = Engineer.new()
-puts test.pick_engineer
+name=test.pick_engineer
+puts name
+puts test.pick_featureA(name)
