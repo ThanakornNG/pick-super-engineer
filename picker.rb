@@ -29,16 +29,40 @@ end
 
 
 test = Engineer.new()
-name = test.pick_engineer
+
+=begin
 puts name
 puts "testing Feature A"#debug
 puts test.pick_featureA(name)
 puts "testing Feature B"#debug
 puts test.featureB
 puts "testing Feature C"#debug
-print "search : "
-t = ARGV[0]
-puts test.featureC(t)#debug
+=end 
+
+if ! ARGV.empty?# check if argument is nil
+	name = test.featureC(ARGV[0]) # grab the argument
+	
+	if name != ""
+		puts "1. %s" % [name]# print out randomed name by search argument
+
+		puts "2. %s" % [test.pick_featureA(name)]
+
+		puts "3. %s" % [test.featureB(name)]
+	end
+end
+
+if ARGV.empty?# check if argument empty
+	name = test.pick_engineer# grab the argument
+	
+	if name != ""
+		puts "1. %s" % [name]# print out randomed name by search argument
+
+		puts "2. %s" % [test.pick_featureA(name)]
+
+		puts "3. %s" % [test.featureB(name)]
+	end
+end
+
 
 
 
