@@ -11,9 +11,8 @@ class Engineer
       name.gsub " ","." #replace space with dot
    end
 
-   def featureB
-      eng = pick_engineer
-      eng[0,eng.index(" ") + 2] + "..."
+   def featureB(name)
+      name[0,name.index(" ") + 2] + "..."
    end
 
    def featureC(txt)# by Karntchana S.
