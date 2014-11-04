@@ -4,7 +4,7 @@ class Engineer
    end
 
    def pick_engineer
-      #@engineers.sample #random and return string
+      @engineers.sample #random and return string
    end
 
    def pick_featureA(name)
