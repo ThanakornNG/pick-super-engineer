@@ -4,7 +4,7 @@ class Engineer
    end
 
    def pick_engineer
-      @engineers.sample #random and return string
+      #@engineers.sample #random and return string
    end
 
    def pick_featureA(name)
@@ -51,9 +51,11 @@ if ! ARGV.empty?# check if argument is nil
 end
 
 if ARGV.empty?# check if argument empty
-	name = test.pick_engineer# grab the argument
+	
 	
 	if name != ""
+	  name = test.pick_engineer# grab the argument
+	  #name = "arack akbar"# #debug 
 		puts "1. %s" % [name]# print out randomed name by search argument
 
 		puts "2. %s" % [test.pick_featureA(name)]
